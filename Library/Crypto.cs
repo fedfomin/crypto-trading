@@ -65,10 +65,10 @@ namespace Library
                 else if (input == "help")
                 {
                     Console.WriteLine("List of commands");
-                    Console.WriteLine("BUY          Used to buy a crypto.");
-                    Console.WriteLine("ADD          To add your own listing.");
-                    Console.WriteLine("WALLET          To check your own wallet.");
-                    Console.WriteLine("CLEAR          To clean your console.");
+                    Console.WriteLine("BUY              Used to buy a crypto.");
+                    Console.WriteLine("ADD              To add your own listing.");
+                    Console.WriteLine("WALLET           To check your own wallet.");
+                    Console.WriteLine("CLEAR            To clean your console.");
 
                     foreach (var list in obj)
                     {
