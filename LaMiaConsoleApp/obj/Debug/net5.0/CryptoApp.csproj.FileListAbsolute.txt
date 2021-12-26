@@ -16,3 +16,4 @@ C:\Users\Fede\Source\Repos\Crypto-Application\LaMiaConsoleApp\obj\Debug\net5.0\C
 C:\Users\Fede\Source\Repos\Crypto-Application\LaMiaConsoleApp\obj\Debug\net5.0\ref\CryptoApp.dll
 C:\Users\Fede\Source\Repos\Crypto-Application\LaMiaConsoleApp\obj\Debug\net5.0\CryptoApp.pdb
 C:\Users\Fede\Source\Repos\Crypto-Application\LaMiaConsoleApp\obj\Debug\net5.0\CryptoApp.genruntimeconfig.cache
+C:\Users\Fede\Source\Repos\Crypto-Application\LaMiaConsoleApp\obj\Debug\net5.0\CryptoApp.csproj.CopyComplete
