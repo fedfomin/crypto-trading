@@ -11,9 +11,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A console application built with .NET C#, register an account, place your coin, your bids, buy a crypto and create your own crypto wallet.
-This application was also inspired by Linux shell to make the environment more interesting.
-
-### Built With
-* [.NET C#](https://docs.microsoft.com/en-us/dotnet/)
+A console application built with [.NET C#](https://docs.microsoft.com/en-us/dotnet/), register an account, place your coin, your bids, buy a crypto and create your own crypto wallet.
+<br>This application was also inspired by Linux shell to make the environment more interesting.
 
