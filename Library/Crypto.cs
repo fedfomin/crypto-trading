@@ -6,10 +6,9 @@ namespace Library
 {
     public static class Crypto
     {
-        public static void ShowListing()
+        public static void ShowListing(List<CryptoModel> obj)
         {
-            List<CryptoModel> m = Setting.AddListing();
-
+            
             Console.Clear();
 
             Console.WriteLine("");
@@ -25,11 +24,11 @@ namespace Library
             Console.WriteLine("");
             Console.WriteLine("Coins available to trade");
 
-            if (m.Count > 0)
+            if (obj.Count > 0)
             {
-                foreach (var list in m)
+                foreach (var list in obj)
                 {
-                    Console.WriteLine($"Crypto: {list.Name} - Bid: {list.Price}.00");
+                    Console.WriteLine($"Crypto: {list.Name} - Bid: {list.Price}");
                 }
             }
             else
@@ -40,17 +39,19 @@ namespace Library
         }
         public static void Start(List<AccountModel> obj)
         {
+            //List<CryptoModel> l = Setting.AddListing(); // uncomment if you want some auto listing.
+            List<CryptoModel> l = new List<CryptoModel>();
 
-            ShowListing();
+            bool x = true;
+            string input, code, name, confirm, price;
+            double p;
+
+            ShowListing(l);
 
             foreach (var list in obj)
             {
                 Console.Write($"\ncrypto@{list.Name}-enter-a-command: ");
             }
-
-            bool x = true;
-            string input, code, name, confirm, price;
-            double p;
 
             while (x)
             {
@@ -91,31 +92,44 @@ namespace Library
                     {
                         foreach (var list in obj)
                         {
-                            Console.Write($"root@{list.Name}-enter-your-first-bid-to {name}: ");
+                            Console.Write($"root@{list.Name}-enter-your-first-bid-to '{name}': ");
                         }
 
                         price = Console.ReadLine();
                         p = Double.Parse(price);
 
                         Console.Write($"\nThis is your listing:\nCrypto: {name}\nFirst Bid: {p}\n\nConfirm? Yes/No: ");
-
                         confirm = Console.ReadLine().ToLower();
 
                         if (confirm == "yes")
                         {
-                            Setting.AddNewListing();
+
+                            l.Add(new CryptoModel
+                            {
+                                Name = name,
+                                Price = p
+                            });
+
+                            Console.Clear();
+
+                            ShowListing(l);
+
+                            foreach (var list in obj)
+                            {
+                                Console.Write($"\ncrypto@{list.Name}-enter-a-command: ");
+                            }
                         }
                         else
                         {
                             Console.Clear();
-                            ShowListing();
+                            ShowListing(l);
                         }
                     }
                 }
                 else if (input == "clear")
                 {
                     Console.Clear();
-                    ShowListing();
+                    ShowListing(l);
 
                     foreach (var list in obj)
                     {

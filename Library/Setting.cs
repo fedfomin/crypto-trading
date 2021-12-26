@@ -56,7 +56,7 @@ namespace Library
             List<CryptoModel> m = new List<CryptoModel>();
             List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
 
-            for(int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 m.Add(new CryptoModel
                 {
@@ -65,20 +65,7 @@ namespace Library
                     Price = 20
                 });
             }
-
             return m;
-
         }
-
-        public static void AddNewListing()
-        {
-            List<CryptoModel> list = new List<CryptoModel>();
-
-            list.Add(new CryptoModel
-            {
-
-            });
-        }
-
     }
 }
