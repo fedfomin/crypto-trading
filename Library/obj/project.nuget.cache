@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "lEC7lQ6gkcqptWA5d3bRmp728uDT0+E3pWkgdPy3Sf6+5pUif1V/9OML3yJfF2UqjB7jlu4WzT2I1aDEc8GibA==",
+  "dgSpecHash": "tTcEH85URfvnQAtuNP/vnOPzvpuvrHHR61Fg8Qve0qBSXT2DFlMUYe7Je0sJhKz9QmgQpFleNO8wFOAVXKqnfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\Library\\Library.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Fede\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fede\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fede\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\Fede\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
+    "C:\\Users\\Fede\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fede\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

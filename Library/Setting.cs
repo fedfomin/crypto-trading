@@ -19,18 +19,18 @@ namespace Library
 
             while (p)
             {
-                Console.Write("[sudo] choose a name for your brokerage account: ");
+                Console.Write("crypto@enter-nickname: ");
                 name = Console.ReadLine();
 
                 if (name.Length > 3)
                 {
-                    Console.Write($"root@{name}-brokerage-crypto password: ");
+                    Console.Write($"crypto@{name}-brokerage-crypto password: ");
                     password = Console.ReadLine();
                     pp = int.Parse(password);
 
                     if(password.Length > 5)
                     {
-                        Console.Write($"root@{name}-brokerage-crypto: you successfully registered.");
+                        Console.Write($"crypto@{name}-brokerage-crypto: you successfully registered.");
 
                         list.Add(new AccountModel
                         {
@@ -41,11 +41,11 @@ namespace Library
                         p = false;
 
                         Console.Clear();
-                        Crypto.ShowListing(list);
+                        Crypto.Start(list);
                     }
                     else
                     {
-                        Console.Write($"[sudo] your password is too small.");
+                        Console.Write($"[error] your password is too small.\n");
                     }
                 }
             }
