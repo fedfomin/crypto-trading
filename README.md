@@ -10,7 +10,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-[https://i.imgur.com/WoP50jZ.png](crypto-wallet)
+![unknown](https://user-images.githubusercontent.com/15944464/147422380-34269872-410a-4479-8030-14e598b11e60.png)
 A console application built with [.NET C#](https://docs.microsoft.com/en-us/dotnet/), register an account, place your coin, your bids, buy a crypto and create your own crypto wallet.
 <br>This application was also inspired by Linux shell to make the environment more interesting.
 
