@@ -3,7 +3,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">Crypto Application (with a registration to your own Brokerage account)</h3>
+  <h3 align="center">Crypto Application</h3>
 </div>
 
 
