@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\LaMiaConsoleApp.csproj": {}
+    "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\CryptoApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\LaMiaConsoleApp.csproj": {
+    "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\CryptoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\LaMiaConsoleApp.csproj",
-        "projectName": "LaMiaConsoleApp",
-        "projectPath": "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\LaMiaConsoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\CryptoApp.csproj",
+        "projectName": "CryptoApp",
+        "projectPath": "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\CryptoApp.csproj",
         "packagesPath": "C:\\Users\\Fede\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\obj\\",
         "projectStyle": "PackageReference",

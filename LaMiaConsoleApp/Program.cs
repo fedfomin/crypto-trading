@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-namespace LaMiaConsoleApp
+namespace CryptoApp
 {
     class Program
     {

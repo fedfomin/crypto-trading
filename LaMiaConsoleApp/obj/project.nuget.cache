@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qSLYs3hGd5bN+1qjLvBLnGUXD2hjKO7LN4Wj5i75GRPUXRQ2kbPaek64e+Mhd0Pjz4CRkp5hlSTFa+6HLTX+lw==",
+  "dgSpecHash": "t0++A51/Fm3aTNSIx+dbb1HcibvVHbheh8zQjbjHfmZTR02jB7sA6FNVYsMu5VPRvmONoRUwmMM1lqUV2vr3Vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fede\\Source\\Repos\\cryptoapp\\LaMiaConsoleApp\\LaMiaConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\Fede\\Source\\Repos\\Crypto-Application\\LaMiaConsoleApp\\CryptoApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
