@@ -51,16 +51,17 @@ namespace Library
             List<CryptoModel> m = new List<CryptoModel>();
             List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
             Random r = new Random();
-            int x = 900, y;
+            int x = 900, z = 3000, y, w;
 
             for (int i = 0; i < 4; i++)
             {
                 y = r.Next(x);
+                w = r.Next(z);
                 m.Add(new CryptoModel
                 {
                     Id = y,
                     Name = names[i],
-                    Price = 20
+                    Price = w
                 });
             }
             return m;
