@@ -14,6 +14,9 @@
 <br><br>
 A console application built with [.NET C#](https://docs.microsoft.com/en-us/dotnet/), register an account, place your coin, your bids, buy a crypto and create your own crypto wallet.
 
+<br><br>
+It is a simulation game of which you can trade your crypto, place them in your wallet, view your margin profit and get rich overnight.
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
