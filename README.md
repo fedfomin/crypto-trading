@@ -13,7 +13,6 @@
 ![unknown](https://user-images.githubusercontent.com/15944464/147422973-f6355f9b-ded8-46ad-bf9d-9bf5f52464b1.png)
 <br><br>
 A console application built with [.NET C#](https://docs.microsoft.com/en-us/dotnet/), register an account, place your coin, your bids, buy a crypto and create your own crypto wallet.
-<br>This application was also inspired by Linux shell to make the environment more interesting.
 
 
 <!-- CONTRIBUTING -->
