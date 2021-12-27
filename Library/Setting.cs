@@ -46,16 +46,19 @@ namespace Library
             }
         }
 
-        static List<CryptoModel> AddListing()
+        public static List<CryptoModel> AddListing()
         {
             List<CryptoModel> m = new List<CryptoModel>();
             List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
-            
+            Random r = new Random();
+            int x = 900, y;
+
             for (int i = 0; i < 4; i++)
             {
+                y = r.Next(x);
                 m.Add(new CryptoModel
                 {
-                    Id = i,
+                    Id = y,
                     Name = names[i],
                     Price = 20
                 });

@@ -40,10 +40,12 @@ namespace Library
 
         public static void Start()
         {
-            List<CryptoModel> l = new List<CryptoModel>();
+            //List<CryptoModel> l = new List<CryptoModel>();
+            List<CryptoModel> l = Setting.AddListing();
 
             bool x = true;
-            string input, code;
+            string input, confirm;
+            int code;
 
             ShowListing(l);
 
@@ -54,9 +56,30 @@ namespace Library
 
                 if (input.StartsWith("buy "))
                 {
+                    string quantity;
+                    int qnty;
+                    double result;
+
                     input = input.Replace("buy ", "").Trim();
-                    code = input;
-                    Console.WriteLine($"Output: {code}");
+                    code = int.Parse(input);
+
+                    foreach(var list in l)
+                    {
+                        if(list.Id == code)
+                        {
+                            Console.Write($"bid@quantity-of '{list.Name}': ");
+                            quantity = Console.ReadLine();
+                            qnty = int.Parse(quantity);
+
+                            result = qnty * list.Price;
+
+                            Console.Write($"bid@you-are-about to buy {qnty} of '{list.Name}' for about {result}, do you confirm? yes/no: ");
+                            confirm = Console.ReadLine().ToLower();
+
+                            if(confirm == "yes")
+                                Console.WriteLine($"crypto@you-bought '{list.Name}' ({qnty} coins)");
+                        }
+                    }
                 }
                 else if (input == "help")
                 {
