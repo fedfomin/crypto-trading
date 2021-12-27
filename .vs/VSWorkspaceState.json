@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Library"
   ],
-  "SelectedNode": "\\CryptoApp.sln",
+  "SelectedNode": "\\Library\\Setting.cs",
   "PreviewInSolutionExplorer": false
 }

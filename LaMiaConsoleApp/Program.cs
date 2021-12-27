@@ -8,7 +8,7 @@ namespace CryptoApp
     {
         static void Main(string[] args)
         {
-            Setting.Register();
+            Crypto.Start();
         }
     }
 }
