@@ -8,7 +8,8 @@ namespace Library
 {
     public class AccountModel
     {
-        public string Name;
-        public int Password;
+        public string Name { get; set; }
+        public int Password { get; set; }
+        public int Traded { get; set; }
     }
 }
