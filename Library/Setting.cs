@@ -10,6 +10,8 @@ namespace Library
     {
         public static void AddCustomListing(List<CryptoModel> obj)
         {
+            Random r = new Random();
+            int x = 900, y = r.Next(x);
             string name, price, confirm;
             double p;
 
@@ -30,6 +32,7 @@ namespace Library
             {
                 obj.Add(new CryptoModel
                 {
+                    Id = y,
                     Name = name,
                     Price = p
                 });
