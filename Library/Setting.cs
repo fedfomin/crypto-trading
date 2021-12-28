@@ -8,7 +8,7 @@ namespace Library
 {
     public static class Setting
     {
-        public static void AddCustomListing(List<CryptoModel> obj)
+        public static void AddCustomListing(List<CryptoModelList> obj)
         {
             Random r = new Random();
             int x = 900, y = r.Next(x);
@@ -30,7 +30,7 @@ namespace Library
 
             if (confirm == "yes")
             {
-                obj.Add(new CryptoModel
+                obj.Add(new CryptoModelList
                 {
                     Id = y,
                     Name = name,
@@ -46,9 +46,9 @@ namespace Library
             }
         }
 
-        public static List<CryptoModel> AddListing()
+        public static List<CryptoModelList> AddListing()
         {
-            List<CryptoModel> m = new List<CryptoModel>();
+            List<CryptoModelList> m = new List<CryptoModelList>();
             List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
             Random r = new Random();
             int x = 900, z = 3000, y, w;
@@ -57,7 +57,7 @@ namespace Library
             {
                 y = r.Next(x);
                 w = r.Next(z);
-                m.Add(new CryptoModel
+                m.Add(new CryptoModelList
                 {
                     Id = y,
                     Name = names[i],

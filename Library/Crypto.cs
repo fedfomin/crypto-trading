@@ -6,7 +6,7 @@ namespace Library
 {
     public static class Crypto
     {
-        public static void ShowListing(List<CryptoModel> obj)
+        public static void ShowListing(List<CryptoModelList> obj)
         {
             Console.Clear();
 
@@ -40,8 +40,8 @@ namespace Library
 
         public static void Start()
         {
-            //List<CryptoModel> l = new List<CryptoModel>();
-            List<CryptoModel> l = Setting.AddListing();
+            //List<CryptoModelList> l = new List<CryptoModelList>();
+            List<CryptoModelList> l = Setting.AddListing();
 
             bool x = true;
             string input, confirm;
@@ -80,7 +80,10 @@ namespace Library
                                 Console.WriteLine($"crypto@you-bought '{list.Name}' ({qnty} coins), check your margin profit in your crypto wallet");
                         }
                     }
-                } 
+                }else if(input == "wallet")
+                {
+
+                }
                 else if (input == "help") 
                 {
                     Console.WriteLine("List of commands");

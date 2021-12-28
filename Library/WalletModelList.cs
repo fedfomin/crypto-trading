@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class CryptoModel
+    class WalletModelList
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public double Price { get; set; }
+        // wip.
     }
 }
