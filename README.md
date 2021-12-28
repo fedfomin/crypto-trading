@@ -9,11 +9,10 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-![unknown](https://user-images.githubusercontent.com/15944464/147422973-f6355f9b-ded8-46ad-bf9d-9bf5f52464b1.png)
+## About
+![unknown](https://user-images.githubusercontent.com/15944464/147514520-d29ac29f-125f-4b67-9839-0f0bb403fc13.png)
 <br><br>
-A console application built with [.NET C#](https://docs.microsoft.com/en-us/dotnet/), register an account, place your coin, your bids, buy a crypto and create your own crypto wallet.
-<br>This application was also inspired by Linux shell to make the environment more interesting.
+A console application built with [.NET C#](https://docs.microsoft.com/en-us/dotnet/), it is a game that simulates how crypto trading are made, in this game you can trade crypto, place them in your wallet, view your margin profit, make your own listing, place bids and create your own wallet.
 
 
 <!-- CONTRIBUTING -->
