@@ -58,7 +58,7 @@ namespace Library
                 {
                     string quantity;
                     int qnty;
-                    double result;
+                    double result, price;
 
                     input = input.Replace("buy ", "").Trim();
                     code = int.Parse(input);
@@ -72,12 +72,25 @@ namespace Library
                             qnty = int.Parse(quantity);
 
                             result = qnty * list.Price;
+                            
+                            if(qnty >= 5 && list.Price >= 50)
+                            {
+                                Console.Write($"bid@you-are-about to buy {qnty} coins of '{list.Name}' for about {result}, confirm? yes/no: ");
+                                confirm = Console.ReadLine().ToLower();
 
-                            Console.Write($"bid@you-are-about to buy {qnty} coins of '{list.Name}' for about {result}, confirm? yes/no: ");
-                            confirm = Console.ReadLine().ToLower();
+                                if (confirm == "yes")
+                                {
+                                    price = list.Price;
+                                    list.Price = list.Price * 5;
 
-                            if (confirm == "yes")
-                                Console.WriteLine($"crypto@you-bought '{list.Name}' ({qnty} coins), check your margin profit in your crypto wallet");
+                                    Setting.CalculateVariation(price, list.Price);
+
+                                    Console.Clear();
+                                    ShowListing(l);
+
+                                    Console.WriteLine($"crypto@you-bought '{list.Name}' ({qnty} coins), check your margin profit in your crypto wallet");
+                                }
+                            }
                         }
                     }
                 }else if(input == "wallet")
@@ -85,18 +98,12 @@ namespace Library
 
                 }
                 else if (input == "help") 
-                {
-                    Console.WriteLine("List of commands");
-                    Console.WriteLine("BUY (code)       Used to buy a crypto.");
-                    Console.WriteLine("ADD              To add your own listing.");
-                    Console.WriteLine("WALLET           To check your own wallet.");
-                    Console.WriteLine("CLEAR            To clean your console.\n");
-
+                { 
+                    Setting.ShowCommands();
                 }
                 else if (input == "add")
                 {
                     Setting.AddCustomListing(l);
-
                 }
                 else if (input == "clear")
                 {

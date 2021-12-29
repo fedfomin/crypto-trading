@@ -66,5 +66,27 @@ namespace Library
             }
             return m;
         }
+
+        public static List<CryptoModelList> CalculateVariation(double x, double y)
+        {
+            List<CryptoModelList> variation = new List<CryptoModelList>();
+            double result = x - (y / x) * 100;
+
+            variation.Add(new CryptoModelList
+            {
+                Variation = result
+            });
+
+            return variation;
+        }
+
+        public static void ShowCommands()
+        {
+            Console.WriteLine("List of commands");
+            Console.WriteLine("BUY (code)       Used to buy a crypto.");
+            Console.WriteLine("ADD              To add your own listing.");
+            Console.WriteLine("WALLET           To check your own wallet.");
+            Console.WriteLine("CLEAR            To clean your console.\n");
+        }
     }
 }
