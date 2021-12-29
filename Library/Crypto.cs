@@ -22,13 +22,25 @@ namespace Library
             Console.WriteLine("");
             Console.WriteLine("");
 
+            
+
+
             if (obj.Count > 0)
             {
-                Console.WriteLine("Coins available to trade");
+                Console.WriteLine($"Code    Coin            ");
                 foreach (var list in obj)
                 {
-                    Console.WriteLine($"Code: {list.Id} - Crypto: {list.Name} - Bid: {list.Price} - 24h V: {list.Variation}%");
+                    if(list.Variation > 0)
+                    {
+                        Console.WriteLine($"{list.Id}     {list.Name}    last bid: {list.Price} - +{list.Variation}%");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{list.Id}     {list.Name}    last bid: {list.Price} - {list.Variation}%");
+                    }
                 }
+
+                Console.WriteLine("\n*Prices in US $");
             }
             else
             {
@@ -93,7 +105,12 @@ namespace Library
                             }
                         }
                     }
-                }else if(input == "wallet")
+                }
+                else if(input == "buy")
+                {
+                    Console.WriteLine("crypto@correct-usage: buy (code)");
+                }
+                else if(input == "wallet")
                 {
 
                 }
@@ -111,9 +128,9 @@ namespace Library
                     ShowListing(l);
 
                 }
-                else
+                else if(input == "q" || input == "quit")
                 {
-                    // some action?..
+                    return;
                 }
             }
         }

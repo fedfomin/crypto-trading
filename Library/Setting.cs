@@ -82,7 +82,8 @@ namespace Library
             Console.WriteLine("BUY (code)       Used to buy a crypto.");
             Console.WriteLine("ADD              To add your own listing.");
             Console.WriteLine("WALLET           To check your own wallet.");
-            Console.WriteLine("CLEAR            To clean your console.\n");
+            Console.WriteLine("CLEAR            To clean your console.");
+            Console.WriteLine("QUIT             To quit from the game.\n");
         }
     }
 }
