@@ -27,7 +27,7 @@ namespace Library
                 Console.WriteLine("Coins available to trade");
                 foreach (var list in obj)
                 {
-                    Console.WriteLine($"Code: {list.Id} - Crypto: {list.Name} - Bid: {list.Price}");
+                    Console.WriteLine($"Code: {list.Id} - Crypto: {list.Name} - Bid: {list.Price} - 24h V: {list.Variation}%");
                 }
             }
             else
@@ -83,7 +83,7 @@ namespace Library
                                     price = list.Price;
                                     list.Price = list.Price * 5;
 
-                                    Setting.CalculateVariation(price, list.Price);
+                                    Setting.CalculateVariation(list, price, list.Price);
 
                                     Console.Clear();
                                     ShowListing(l);

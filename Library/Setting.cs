@@ -67,17 +67,13 @@ namespace Library
             return m;
         }
 
-        public static List<CryptoModelList> CalculateVariation(double x, double y)
+        public static void CalculateVariation(CryptoModelList variation, double x, double y)
         {
-            List<CryptoModelList> variation = new List<CryptoModelList>();
+            List<CryptoModelList> list = new List<CryptoModelList>();
             double result = x - (y / x) * 100;
 
-            variation.Add(new CryptoModelList
-            {
-                Variation = result
-            });
-
-            return variation;
+            variation.Variation = result;
+            list.Add(variation);
         }
 
         public static void ShowCommands()
