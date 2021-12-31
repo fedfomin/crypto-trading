@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
-using MlkPwgen;
 
 namespace Library
 {
@@ -13,7 +12,7 @@ namespace Library
         public static List<CryptoModelList> m = new List<CryptoModelList>();
         public static List<WalletModelList> wallet = new List<WalletModelList>();
         public static List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
-        public static System.Random r = new System.Random();
+        public static Random r = new Random();
         public static int x = 900, z = 3000, y, w;
         public static string name, price, confirm;
         public static double p;
@@ -76,11 +75,11 @@ namespace Library
 
         public static List<WalletModelList> CryptoAddress()
         {
-            var Key = PasswordGenerator.Generate(length: 64, allowed: Sets.Alphanumerics);
+            SHA256 key = SHA256.Create();
 
             wallet.Add(new WalletModelList
             {
-                Key = Key
+                Key = key
             });
 
             return wallet;
