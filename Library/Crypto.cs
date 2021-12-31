@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Management;
+using System.Security.Cryptography;
 
 namespace Library
 {
@@ -54,6 +55,7 @@ namespace Library
         {
             //List<CryptoModelList> l = new List<CryptoModelList>();
             List<CryptoModelList> l = Setting.AddListing();
+            List<WalletModelList> wallet = Setting.CryptoAddress();
 
             bool x = true;
             string input, confirm;
@@ -112,11 +114,20 @@ namespace Library
                 }
                 else if(input == "wallet")
                 {
-
+                    foreach(var key in wallet)
+                    {
+                        Console.WriteLine($"crypto@your-wallet: {key.Key}");
+                    }
+                    
                 }
                 else if (input == "help") 
-                { 
-                    Setting.ShowCommands();
+                {
+                    Console.WriteLine("List of commands");
+                    Console.WriteLine("BUY (code)       Used to buy a crypto.");
+                    Console.WriteLine("ADD              To add your own listing.");
+                    Console.WriteLine("WALLET           To check your own wallet.");
+                    Console.WriteLine("CLEAR            To clean your console.");
+                    Console.WriteLine("QUIT             To quit from the game.\n");
                 }
                 else if (input == "add")
                 {

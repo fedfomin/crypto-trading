@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using MlkPwgen;
 
 namespace Library
 {
     public static class Setting
     {
+        public static List<CryptoModelList> m = new List<CryptoModelList>();
+        public static List<WalletModelList> wallet = new List<WalletModelList>();
+        public static List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
+        public static System.Random r = new System.Random();
+        public static int x = 900, z = 3000, y, w;
+        public static string name, price, confirm;
+        public static double p;
+
         public static void AddCustomListing(List<CryptoModelList> obj)
         {
-            Random r = new Random();
-            int x = 900, y = r.Next(x);
-            string name, price, confirm;
-            double p;
-
             Console.Clear();
 
             Console.Write("You are adding a new listing.\nWhat will be your coin name?: ");
@@ -48,11 +53,6 @@ namespace Library
 
         public static List<CryptoModelList> AddListing()
         {
-            List<CryptoModelList> m = new List<CryptoModelList>();
-            List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
-            Random r = new Random();
-            int x = 900, z = 3000, y, w;
-
             for (int i = 0; i < 4; i++)
             {
                 y = r.Next(x);
@@ -69,21 +69,21 @@ namespace Library
 
         public static void CalculateVariation(CryptoModelList variation, double x, double y)
         {
-            List<CryptoModelList> list = new List<CryptoModelList>();
             double result = x - (y / x) * 100;
-
             variation.Variation = result;
-            list.Add(variation);
+            m.Add(variation);
         }
 
-        public static void ShowCommands()
+        public static List<WalletModelList> CryptoAddress()
         {
-            Console.WriteLine("List of commands");
-            Console.WriteLine("BUY (code)       Used to buy a crypto.");
-            Console.WriteLine("ADD              To add your own listing.");
-            Console.WriteLine("WALLET           To check your own wallet.");
-            Console.WriteLine("CLEAR            To clean your console.");
-            Console.WriteLine("QUIT             To quit from the game.\n");
+            var Key = PasswordGenerator.Generate(length: 64, allowed: Sets.Alphanumerics);
+
+            wallet.Add(new WalletModelList
+            {
+                Key = Key
+            });
+
+            return wallet;
         }
     }
 }

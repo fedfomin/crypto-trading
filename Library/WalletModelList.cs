@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Library
 {
-    class WalletModelList
+    public class WalletModelList
     {
-        // wip.
+        public string Key { get; set; }
     }
 }
