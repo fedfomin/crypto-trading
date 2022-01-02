@@ -9,16 +9,14 @@ namespace Library
 {
     public static class Setting
     {
-        public static List<CryptoModelList> m = new List<CryptoModelList>();
-        public static List<WalletModelList> wallet = new List<WalletModelList>();
-        public static List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
-        public static Random r = new Random();
-        public static int x = 900, z = 3000, y, w;
-        public static string name, price, confirm;
-        public static double p;
-
         public static void AddCustomListing(List<CryptoModelList> obj)
         {
+            string name, price, confirm;
+            double p;
+            Random r = new Random();
+            int x = 900;
+            int y = r.Next(x);
+
             Console.Clear();
 
             Console.Write("You are adding a new listing.\nWhat will be your coin name?: ");
@@ -52,6 +50,11 @@ namespace Library
 
         public static List<CryptoModelList> AddListing()
         {
+            List<CryptoModelList> m = new List<CryptoModelList>();
+            List<string> names = new List<string>() { "LTC Litecoin", "DOGE Dogecoin", "BTC Bitcoin", "ETH Ethereum" };
+            Random r = new Random();
+            int x = 900, z = 3000, y, w;
+
             for (int i = 0; i < 4; i++)
             {
                 y = r.Next(x);
@@ -69,20 +72,22 @@ namespace Library
         public static void CalculateVariation(CryptoModelList variation, double x, double y)
         {
             double result = x - (y / x) * 100;
+            List<CryptoModelList> m = new List<CryptoModelList>();
             variation.Variation = result;
             m.Add(variation);
         }
 
-        public static List<WalletModelList> CryptoAddress()
-        {
-            SHA256 key = SHA256.Create();
+        //public static List<WalletModelList> CryptoAddress()
+        //{
+        //    List<WalletModelList> wallet = new List<WalletModelList>();
+        //    SHA256 key = SHA256.Create();
 
-            wallet.Add(new WalletModelList
-            {
-                Key = key
-            });
+        //    wallet.Add(new WalletModelList
+        //    {
+        //        Key = key
+        //    });
 
-            return wallet;
-        }
+        //    return wallet;
+        //}
     }
 }

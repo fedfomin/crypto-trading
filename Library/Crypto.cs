@@ -23,9 +23,6 @@ namespace Library
             Console.WriteLine("");
             Console.WriteLine("");
 
-            
-
-
             if (obj.Count > 0)
             {
                 Console.WriteLine($"Code    Coin            ");
@@ -55,7 +52,7 @@ namespace Library
         {
             //List<CryptoModelList> l = new List<CryptoModelList>();
             List<CryptoModelList> l = Setting.AddListing();
-            List<WalletModelList> wallet = Setting.CryptoAddress();
+            //List<WalletModelList> wallet = Setting.CryptoAddress();
 
             bool x = true;
             string input, confirm;
@@ -114,11 +111,7 @@ namespace Library
                 }
                 else if(input == "wallet")
                 {
-                    foreach(var key in wallet)
-                    {
-                        Console.WriteLine($"crypto@your-wallet: {key.Key}");
-                    }
-                    
+
                 }
                 else if (input == "help") 
                 {
