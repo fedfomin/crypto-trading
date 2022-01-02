@@ -80,11 +80,21 @@ namespace Library
         public static List<WalletModelList> CryptoAddress()
         {
             List<WalletModelList> wallet = new List<WalletModelList>();
-            SHA256 key = SHA256.Create();
+
+            var rsaServer = new RSACryptoServiceProvider(1024);
+            var publicKeyXml = rsaServer.ToXmlString(false);
+
+            var rsaClient = new RSACryptoServiceProvider(1024);
+            rsaClient.FromXmlString(publicKeyXml);
+
+            var data = Encoding.UTF8.GetBytes("Data To Be Encrypted");
+
+            var encryptedData = rsaClient.Encrypt(data, false);
+            var decryptedData = rsaServer.Decrypt(encryptedData, false);
 
             wallet.Add(new WalletModelList
             {
-                Key = key
+                Key = decryptedData
             });
 
             return wallet;

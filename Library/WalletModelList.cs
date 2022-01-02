@@ -9,6 +9,6 @@ namespace Library
 {
     public class WalletModelList
     {
-        public SHA256 Key { get; set; }
+        public byte[] Key { get; set; }
     }
 }

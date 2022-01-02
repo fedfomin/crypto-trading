@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Management;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace Library
 {
@@ -112,7 +113,9 @@ namespace Library
                 {
                     foreach (var key in wallet)
                     {
-                        Console.WriteLine($"crypto@your-wallet: {key.Key}");
+                        int len = key.Key.Length;
+
+                        Console.WriteLine($"crypto@your-wallet: {key.Key[len-1]}");
                     }
 
                 }
