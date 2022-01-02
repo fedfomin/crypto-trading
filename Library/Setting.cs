@@ -77,17 +77,17 @@ namespace Library
             m.Add(variation);
         }
 
-        //public static List<WalletModelList> CryptoAddress()
-        //{
-        //    List<WalletModelList> wallet = new List<WalletModelList>();
-        //    SHA256 key = SHA256.Create();
+        public static List<WalletModelList> CryptoAddress()
+        {
+            List<WalletModelList> wallet = new List<WalletModelList>();
+            SHA256 key = SHA256.Create();
 
-        //    wallet.Add(new WalletModelList
-        //    {
-        //        Key = key
-        //    });
+            wallet.Add(new WalletModelList
+            {
+                Key = key
+            });
 
-        //    return wallet;
-        //}
+            return wallet;
+        }
     }
 }

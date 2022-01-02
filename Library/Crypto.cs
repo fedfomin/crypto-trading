@@ -50,9 +50,8 @@ namespace Library
 
         public static void Start()
         {
-            //List<CryptoModelList> l = new List<CryptoModelList>();
             List<CryptoModelList> l = Setting.AddListing();
-            //List<WalletModelList> wallet = Setting.CryptoAddress();
+            List<WalletModelList> wallet = Setting.CryptoAddress();
 
             bool x = true;
             string input, confirm;
@@ -111,6 +110,10 @@ namespace Library
                 }
                 else if(input == "wallet")
                 {
+                    foreach (var key in wallet)
+                    {
+                        Console.WriteLine($"crypto@your-wallet: {key.Key}");
+                    }
 
                 }
                 else if (input == "help") 
